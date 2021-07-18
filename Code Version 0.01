@@ -1,3 +1,8 @@
+//This is version 0.01
+//The Bot was in Pre-Alpha in this version
+//This was not a public version
+
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
