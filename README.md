@@ -1,7 +1,7 @@
 # HangOutBot
 The code for the Hang Out Bot
 
-There will be a file version for each verion of the bot
+There will be a new file for each verion of the bot
 
 This project is still beging worked on
 
