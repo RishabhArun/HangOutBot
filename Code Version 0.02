@@ -1,0 +1,63 @@
+//This is version 0.02
+//The Bot was in Pre-Alpha in this version
+//This was not a public version
+
+
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+
+
+//Patch Notes
+client.on('message' , msg => {
+    if (msg.content === "giv patchnotes"){
+const polembed = new Discord.MessageEmbed()
+    .setColor('#29e684')
+    .setTitle('Patch Notes 0.02')
+    .setAuthor('@d3ca')
+    .setDescription('7/18/2021')
+    .addFields(
+        {name: 'Major Changes', value: 'Added giv patchnotes'},
+        {name: 'Major Changes', value: 'Added giv help'},
+        {name: 'Major Changes Cont.', value: 'Version 0.01'},
+        {name: 'Minor Changes', value: 'None'},
+        {name: '\u200b' , value: '\u200b'},
+    )
+    .setFooter('2021 Power RnD/2021 Power Engineering/2021 Power Global')
+    .setTimestamp()
+    
+    msg.channel.send(polembed)
+}
+});
+
+//helppro
+client.on('message' , msg => {
+    if (msg.content === "giv help") {
+      const polembed = new Discord.MessageEmbed()
+      .setColor('#29e684')
+      .setAuthor('@d3ca')
+      .setTitle('You Asked For help')
+      .setDescription('7/18/2021')
+      .addFields(
+        { name: 'Help', value: 'Want more help, or want to report a bug? Contact @d3ca' },
+        { name: 'Commands', value: 'Here is a list of command' },
+        { name: '\u200B', value: '\u200B' },
+        { name: 'Want the patch notes', value: 'giv patchnotes', inline: true },
+        
+       )
+        .setFooter('2021 Power RnD/2021 Power Engineering/2021 Power Global')
+        .setTimestamp()
+  
+          msg.channel.send(polembed)
+      
+    } 
+  });
+
+
+
+
+client.login('PLACE HOLDER-YOU WILL NEED TO ENTER YOUR CLIENT KEY');
