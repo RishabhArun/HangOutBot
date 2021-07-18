@@ -1,1 +1,33 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+
+
+//Patch Notes
+client.on('message' , msg => {
+    if (msg.content === "giv patchnotes"){
+const polembed = new Discord.MessageEmbed()
+    .setColor('#29e684')
+    .setTitle('Patch Notes 0.01')
+    .setAuthor('@d3ca')
+    .setDescription('7/18/2021')
+    .addFields(
+        {name: 'Major Changes', value: 'Added giv patchnotes'},
+        {name: 'Major Changes Cont.', value: 'Version 0.01'},
+        {name: 'Minor Changes', value: 'None'},
+        {name: '\u200b' , value: '\u200b'},
+    )
+    .setFooter('2021 Power RnD/2021 Power Engineering/2021 Power Global')
+    .setTimestamp()
+    
+    msg.channel.send(polembed)
+}
+});
+
+
+
+client.login('PLACE HOLDER-YOU WILL NEED TO ENTER YOUR CLIENT KEY');
